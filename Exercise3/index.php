@@ -23,11 +23,31 @@ function doWordsHaveChar(array $words, string $character): bool
     return (count($result) === count($words));
 }
 
+function doWordsHaveCharSecondVersion(array $words, string $character): bool
+{
+    $index = 0;
+    $found = true;
+    while ($index < count($words) && $found) {
+       if (strpos($words[$index], $character[0]) === false) {
+            $found = false;
+        }
+        $index++;
+    }
+    return $found;
+}
+
 
 echo PHP_EOL;
-echo "Is there an 'l' in all the words of the array?: " . var_export(doWordsHaveChar($words, "l"), true);
+echo "Is there an 'l' in all the words of the array?: " . (doWordsHaveChar($words, "l") ? "true" : "false");
 
 echo PHP_EOL;
-echo "Is there an 'h' in all the words of the array?: " . var_export(doWordsHaveChar($words, "h"), true);
+echo "Is there an 'h' in all the words of the array?: " . (doWordsHaveChar($words, "h") ? "true" : "false");
+
+
+echo PHP_EOL;
+echo "Is there an 'l' in all the words of the array?: " . (doWordsHaveCharSecondVersion($words, "l") ? "true" : "false");
+
+echo PHP_EOL;
+echo "Is there an 'h' in all the words of the array?: " . (doWordsHaveCharSecondVersion($words, "h") ? "true" : "false");
 
 ?>

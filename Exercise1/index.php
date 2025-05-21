@@ -8,10 +8,7 @@ Crea un array, afegeix-li 5 nombres enters i després mostrals per pantalla d’
 
 $numbers = [];
 
-array_push($numbers, 12);
-array_push($numbers, 12455);
-array_push($numbers, 60769);
-array_push($numbers, 123);
+array_push($numbers, 12, 12455, 60769, 123);
 //Another way of pushing values into an array
 $numbers[] = 666;
 
