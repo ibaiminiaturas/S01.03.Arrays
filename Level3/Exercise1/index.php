@@ -9,7 +9,7 @@ Devuelve cada valor del array al cubo usando el array-map().
 
 $numbers = [1, 2, 3, 4, 5];
 
-$cubedNumbers = array_map('cubeNumber', $numbers);
+$cubedNumbers = array_map("cubeNumber", $numbers);
 
 $result = print_r($cubedNumbers, true);
 echo "Los numeros al cubo del array son " . $result . PHP_EOL;
